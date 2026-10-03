@@ -32,7 +32,7 @@ export const event = {
   venue: "Seminar Hall, Block 4",
   // Dates and times are configurable: the source documents disagree
   // (cover lists 2PM–4PM, schedule lists 12:00–4:00). Confirm before launch.
-  dates: ["12 Sep 2026", "13 Sep 2026"],
+  dates: ["12 Oct 2026", "13 Oct 2026"],
   timeNote: "Timings to be confirmed by the organizers",
   instagram: "@oratorsclubmjcet",
   instagramUrl: "https://instagram.com/oratorsclubmjcet",

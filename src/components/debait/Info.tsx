@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Plus } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import { event, previewMatch, liveMatch, rules, schedule, teams, type LiveMatch, type Team } from "@/content/event";
-import logo from "@/assets/orators-logo.png.asset.json";
+import logoMark from "@/assets/logo-mark.png";
 import { Kicker, Reveal, Scribble } from "./primitives";
 
 export function Schedule() {
@@ -216,6 +216,15 @@ export function Live() {
               <li key={x} className="border border-ivory/30 px-3 py-1.5">{x}</li>
             ))}
           </ul>
+          <div className="mt-8">
+            <a
+              href="/scoreboard"
+              className="btn-hot inline-flex items-center gap-2 border-2 border-sun text-base"
+            >
+              <span>ENTER LIVE SCOREBOARD</span>
+              <span>→</span>
+            </a>
+          </div>
         </div>
         <Reveal>
           {liveMatch ? <LiveScorecard match={liveMatch} /> : <LiveScorecard match={previewMatch} preview />}
@@ -245,7 +254,7 @@ export function Closing() {
 
         <footer className="mt-28 grid gap-8 border-t-2 border-ink pt-8 md:grid-cols-3">
           <div className="flex items-center gap-4">
-            <img src={logo.url} alt="Orators' Club MJCET, Dept. of English" className="h-16 w-16 rounded-full object-cover" />
+            <img src={logoMark} alt="Orators' Club MJCET, Dept. of English" className="h-16 w-16 rounded-full object-cover" />
             <div>
               <p className="display text-2xl">{event.organizer}</p>
               <p className="font-type text-xs uppercase">{event.college} · Dept. of English</p>
