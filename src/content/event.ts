@@ -98,7 +98,7 @@ export const scoring = [
 export const schedule: ScheduleDay[] = [
   {
     label: "Day 01",
-    date: event.dates[0],
+    date: event.dates[0]!,
     items: [
       { time: "12:00–12:15", title: "Reporting, registration & inauguration" },
       { time: "12:15–12:30", title: "Briefing: rules, format & judging" },
@@ -109,7 +109,7 @@ export const schedule: ScheduleDay[] = [
   },
   {
     label: "Day 02",
-    date: event.dates[1],
+    date: event.dates[1]!,
     items: [
       { time: "12:00–12:15", title: "Reporting & knockout briefing" },
       { time: "12:15–1:15", title: "Quarterfinals (4 matches)" },

@@ -43,7 +43,7 @@ export function Zones() {
                   className="display text-[22vw] leading-none text-ink lg:text-[260px]"
                   aria-hidden
                 >
-                  {zones[active].n}
+                  {zones[active]!.n}
                 </motion.div>
               </AnimatePresence>
               <div className="absolute bottom-6 left-6 right-6 flex gap-2">
@@ -83,11 +83,6 @@ export function SwitchRound() {
     };
   }, [inView, reduce]);
 
-  const flip = () => {
-    setSide("switch");
-    setTimeout(() => setSide((s) => (s === "switch" ? (Math.random() > 2 ? "prop" : "x" as never) : s)), 0);
-  };
-  void flip;
 
   const cycle = () => {
     const next = side === "opp" ? "prop" : "opp";
@@ -108,7 +103,7 @@ export function SwitchRound() {
     >
       <div className="mx-auto max-w-[1400px]">
         <div className="mb-8 flex items-center gap-4 font-type text-sm uppercase tracking-widest">
-          <span className="bg-current px-2 py-1"><span className="mix-blend-difference">06</span></span>
+          <span className="border-2 border-current px-2 py-0.5">06</span>
           <span>Rule 9 · Unannounced</span>
           <span className="h-px flex-1 bg-current opacity-30" />
         </div>
