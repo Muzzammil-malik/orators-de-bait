@@ -43,7 +43,7 @@ export function Schedule() {
               className="border-t-2 border-ink"
               role="tabpanel"
             >
-              {schedule[day].items.map((it) => {
+              {schedule[day]!.items.map((it) => {
                 const big = /Round|finals|Final/.test(it.title);
                 return (
                   <li key={it.time} className="group grid grid-cols-[110px_1fr] items-baseline gap-4 border-b border-ink/25 py-5 md:grid-cols-[160px_1fr]">
